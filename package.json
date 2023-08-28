@@ -1,0 +1,24 @@
+{
+	"name": "nw-offchain-tools",
+	"version": "1.0.0",
+	"license": "MIT",
+	"dependencies": {
+		"aws-sdk": "^2.1236.0",
+		"dotenv": "^16.0.3",
+		"ethers": "^5.7.2",
+		"got": "^12.5.2",
+		"imagescript": "^1.2.9",
+		"redis": "^4.6.5"
+	},
+	"type": "module",
+	"devDependencies": {
+		"prettier": "2.7.1"
+	},
+	"engines": {
+		"node": ">= 16.15.1"
+	},
+	"scripts": {
+		"install-metadata-server": "yarn install && yarn --cwd ./token-data-merge/servers/metadata-server/ install",
+		"start-metadata-server": "yarn --cwd ./token-data-merge/servers/metadata-server/ start"
+	}
+}

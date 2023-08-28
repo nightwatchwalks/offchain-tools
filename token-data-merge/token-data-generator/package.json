@@ -1,0 +1,13 @@
+{
+  "name": "token-data-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "random-seed": "^0.3.0"
+  },
+  "scripts": {
+    "generate": "node index.js"
+  }
+}

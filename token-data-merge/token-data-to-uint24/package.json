@@ -1,0 +1,10 @@
+{
+	"name": "token-data-to-uint24",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"convert": "node index"
+	}
+}

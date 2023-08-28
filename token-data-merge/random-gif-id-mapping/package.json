@@ -1,0 +1,13 @@
+{
+	"name": "random-gif-id-mapping",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"type": "module",
+	"dependencies": {
+		"random-seed": "^0.3.0"
+	},
+  "scripts": {
+    "start": "node index.js"
+  }
+}
