@@ -46,7 +46,7 @@ async function main() {
 		// Generate token images simultaneously
 		const promises = [];
 		for (let i = 0; i < simultaneousGeneration; i++) {
-			if (tokenId + i < totalSupply) {
+			if (tokenId + i < 6825) {
 				promises.push(generateTokenImage(tokenId + i));
 			}
 		}
@@ -54,9 +54,6 @@ async function main() {
 		// Wait for all promises to resolve
 		await Promise.all(promises);
 	}
-
-	// Close cache
-	await cache.flush();
 }
 
 main();
