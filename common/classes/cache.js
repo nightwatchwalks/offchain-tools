@@ -23,7 +23,7 @@ export default class Cache {
 		return await this.client.get(key);
 	}
 
-	async set(key, value, expirationTimeInSeconds = defaultCacheTime) {
+	async set(key, value, expirationTimeInSeconds = this.defaultCacheTime) {
 		return await this.client.set(key, value, {
 			EX: expirationTimeInSeconds,
 		});
