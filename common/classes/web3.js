@@ -17,9 +17,11 @@ export default class Web3 {
 
 		const customNodeUrl = process.env.CUSTOM_NODE_URL;
 		this.cache = cache;
+		this.network = process.env.NETWORK;
+		if (!this.network) throw new Error("NETWORK is required");
 
 		if (customNodeUrl) {
-			this.provider = new ethers.providers.JsonRpcProvider(customNodeUrl);
+			this.provider = new ethers.providers.JsonRpcProvider(customNodeUrl, this.network);
 		} else {
 			throw new Error("CUSTOM_NODE_URL is required");
 		}
