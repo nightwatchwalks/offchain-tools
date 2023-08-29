@@ -199,6 +199,12 @@ class MetadataServer {
 		// Get animal names from the gif name
 		const animals = gifName.replace(".gif", "").split("-");
 
+		// Add trio name to the attributes object
+		attributes.push({
+			trait_type: "Trio Name",
+			value: gifName.replace(".gif", ""),
+		});
+
 		// Add animals to the attributes object
 		for (const animal of animals) {
 			attributes.push({
