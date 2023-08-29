@@ -1,6 +1,6 @@
 import * as dotenv from "dotenv";
 import { Hash, createPublicClient, fallback, http, webSocket, parseAbiItem, Block } from "viem";
-import { goerli, mainnet } from "viem/chains";
+import { goerli, mainnet, sepolia } from "viem/chains";
 import * as redis from "redis";
 import fs from "fs";
 
@@ -316,7 +316,7 @@ function getChain() {
 
 	const chainId: number = Number(getEnv("CHAIN_ID"));
 
-	return chainId === 31337 ? anvilLocalhost : chainId === 5 ? goerli : mainnet;
+	return chainId === 31337 ? anvilLocalhost : chainId === 5 ? goerli : chainId === 11155111 ? sepolia : mainnet;
 }
 
 async function delay(ms: number) {
